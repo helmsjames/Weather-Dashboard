@@ -17,3 +17,6 @@ h1 {
 .jumbotron {
     padding: 0px;
 }
+#submit, .card-body {
+  background-color: dodgerblue;
+}
