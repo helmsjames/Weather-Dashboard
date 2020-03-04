@@ -1,4 +1,9 @@
 
+.container {
+  float: left;
+  flex-flow: wrap;
+}
+  
 h1 {
     color: white;
     justify-content: center;    
@@ -21,9 +26,24 @@ h5, p {
 }
 .card-body {
   background-color: dodgerblue;
-  justify-content: right;
-  float: right;
+  justify-content: space-around;
+  float: left;
 }
 i {
   color: white;
 }
+/* .container {
+  margin: 0 auto;
+  flex-wrap: wrap;
+} */
+.card  {
+  flex-wrap: wrap;
+}
+.col-sm-2 {
+  max-width: 100%;
+}
+.col-sm-4 {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.row 
