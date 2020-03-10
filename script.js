@@ -1,19 +1,17 @@
-// $( document ).ready(function() {
-//     console.log( "ready!" );
-// });
-
-//onsubmit
-
+$( document ).ready(function() {
+ });
 
 var APIKey = "1ab0bfe8d343049b298bfab694993cdd";
 var searchedCity;
 var queryURL;
 var tempConversion = "&units=imperial";
 
-$("#submit").click(function(){
+function clickHandler(){
   console.log("Clicked!");
   citySearched = $("#city-input").val();
-   queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearched + "&appid=" + APIKey + tempConversion;
+  queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearched + "&appid=" + APIKey + tempConversion;}
+$("#submit").click(function(){
+  clickHandler();
   let cities = localStorage.getItem("cities");
   if(!cities) {
     cities = [];
@@ -24,12 +22,11 @@ $("#submit").click(function(){
 
   cities.push(citySearched);
   localStorage.setItem("cities", JSON.stringify(cities));
+  const item = $(`<li>${citySearched}</li>`);
+  item.click(clickHandler);
+  $("#cityStored").append(item);
 });
 
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   })
   var searchButton = document.querySelector("#submit");
   var temp1 = document.querySelector("#temp-1");
   var hum1 = document.querySelector("#hum-1");
