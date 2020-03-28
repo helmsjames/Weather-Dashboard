@@ -14,7 +14,9 @@
 .card-body.h5, .card-body.p {
   color: white;
 }
-
+#city-data {
+  background-color: white;
+}
 .search {
   color: black;
 }
