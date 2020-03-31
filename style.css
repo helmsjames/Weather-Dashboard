@@ -6,6 +6,9 @@
  h1 {
    color: white;
  } 
+  #city-data {
+   text-align: left;
+ }
 .card-body.h1 {
     color: white;
     justify-content: center;    
@@ -29,25 +32,19 @@
   background-color: dodgerblue;
 }
 .card-body {
-  text-align: center;
+  text-align: left;
   background-color: dodgerblue;
   justify-content: space-around;
   float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 i {
   color: white;
 }
-/* .container {
-  margin: 0 auto;
-  flex-wrap: wrap;
-} */
-/* .card  {
-  flex-wrap: wrap;
-} */
-/* .col-sm-2 {
-  max-width: 100%;
-} */
-.col-sm-4 {
+
+.col-sm-2 {
   flex-wrap: wrap;
   justify-content: flex-start;
 }

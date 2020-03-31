@@ -32,7 +32,13 @@ function buttonClickHandler(){
       $.ajax({url: uvUrl, method: "GET"}).then(res => {
         let cardData = $(
           `<h2>${citySearched}</h2>
-          <span>${res.value}</span>`
+          <span>Temperature:  </span>
+          <br>
+          <span>Humidity:  </span>
+          <br>
+          <span>Wind Speed:  </span>
+          <br>
+          <span>UV Index:  ${res.value}</span>`
         );
       $("#city-data").append(cardData);
       })
@@ -64,10 +70,12 @@ function buttonClickHandler(){
     var outerElement = $("#five-day");
       for (let index = 0; index < 5; index++) {        
         var card = $(`<div class="col-sm-2 card-body">
-        <img class="icon" src="${day1Array[index].icon}">
         <h5 class="card-title date">${new Date(day1Array[index].dt_txt).toLocaleDateString()}</h5>
-        Temp: <span class="card-text temp">${day1Array[index].main.temp}</span>
-        Humidity: <span class="card-text humidity">${day1Array[index].main.humidity}</span>        
+        <img class="icon" src="${day1Array[index].icon}"> 
+        <br>       
+        Temp: <span class="card-text temp">${day1Array[index].main.temp}&#8457;</span>
+        <br>
+        Humidity: <span class="card-text humidity">${day1Array[index].main.humidity}&#37;</span>        
       </div>`);
         outerElement.append(card)
       }
