@@ -6,8 +6,8 @@ var searchedCity;
 var queryURL;
 var tempConversion = "&units=imperial";
 var searchButton = document.querySelector("#submit");
-var temp1 = document.querySelector("#temp-1");
-  var hum1 = document.querySelector("#hum-1");
+// var temp1 = document.querySelector("#temp-1");
+// var hum1 = document.querySelector("#hum-1");
 
 function buttonClickHandler(){
   var day1Array = [];
@@ -25,21 +25,20 @@ function buttonClickHandler(){
         cities.push(citySearched);
         localStorage.setItem("cities", JSON.stringify(cities));
         const item = $(`<li class="list-group-item">${citySearched}</li>`);
-        $("#cityStored").append(item);
+        $("#cityStored").append(item);        
 
     $.ajax({url: queryURL, method: "GET"}).then(function(response) {
       const uvUrl = `http://api.openweathermap.org/data/2.5/uvi?appid=${APIKey}&lat=${response.city.coord.lat}&lon=${response.city.coord.lon}`
       $.ajax({url: uvUrl, method: "GET"}).then(res => {
+        console.log(response.list[0].main.temp);
         let cardData = $(
-          `<h2>${citySearched}</h2>
-          <span>Temperature:  </span>
-          <br>
-          <span>Humidity:  </span>
-          <br>
-          <span>Wind Speed:  </span>
-          <br>
-          <span>UV Index:  ${res.value}</span>`
+          `<h2>${citySearched}<span> ${new Date(response.list[0].dt_txt).toLocaleDateString()}</span><img class="icon" src=${response.list[0].icon}></h2>
+          <h5>Temperature: ${response.list[0].main.temp} </h5>          
+          <h5>Humidity:  ${response.list[0].main.humidity}</h5>         
+          <h5>Wind Speed:  ${response.list[0].wind.speed}</h5>          
+          <h5>UV Index:  ${res.value}</h5>`
         );
+          $("#city-data").empty();
       $("#city-data").append(cardData);
       })
       console.log(response.list[0]);
