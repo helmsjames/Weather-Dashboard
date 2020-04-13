@@ -6,8 +6,6 @@ var searchedCity;
 var queryURL;
 var tempConversion = "&units=imperial";
 var searchButton = document.querySelector("#submit");
-// var temp1 = document.querySelector("#temp-1");
-// var hum1 = document.querySelector("#hum-1");
 
 function buttonClickHandler(){
   var day1Array = [];
