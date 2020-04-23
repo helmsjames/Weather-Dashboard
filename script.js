@@ -117,8 +117,6 @@ function buttonClickHandler(){
       day1Array = [];
     }
 
-
-
 $(document).on("click", "li" , liClickHandler);
 searchButton.addEventListener("click", buttonClickHandler);
 

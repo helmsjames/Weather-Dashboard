@@ -1,8 +1,4 @@
 
-/* .container {
-  float: left;
-  flex-flow: wrap;
-} */
  h1 {
    color: white;
  } 
@@ -40,18 +36,13 @@
 }
 .card-body {
   text-align: left;
-  background-color: dodgerblue;
-  /* justify-content: space-around; */
-  float: right;
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 25rem;
+  background-color: dodgerblue;  
+  float: left;
+  margin-left: 3px;
+  margin-right: 3px;
   border-radius: 5px;
 }
 i {
   color: white;
-}
-
-.col-sm-2 {
-  flex-wrap: wrap;
-  justify-content: flex-start;
 }
