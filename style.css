@@ -1,7 +1,15 @@
-
+body {
+  margin: 20px;
+}
  h1 {
    color: white;
  } 
+ .fiveDay {
+   color: black;
+   text-align: left;
+   padding-left: 20px;
+ }
+
   #city-data {
    text-align: left;
  }

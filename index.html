@@ -13,12 +13,9 @@
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Weather Dashboard</title>
-
-
 </head>
 
 <body>
-
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -26,7 +23,6 @@
       </div>
     </nav>
     <div class="row">
-
       <div class="col-sm-3">
         <h5 class="search">Search for a city:</h5>
         <label class="sr-only" for="help-search">Search</label>
@@ -34,13 +30,15 @@
         <button type="submit" id="submit"><i class="fas fa-search"></i></button>
 
         <ul class="list-group" id="cityStored"></ul>
+        
       </div>
       <div class="col-sm-9">
         <div class="card">
           <div class="card-body" id="city-data">
           </div>
-
+          <h1 class="fiveDay">5-Day Forecast:</h1>
           <div id="five-day" class="row">
+            
 
           </div>
         </div>

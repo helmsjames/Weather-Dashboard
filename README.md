@@ -47,4 +47,4 @@ https://github.com/helmsjames/Weather-Dashboard
 ## Screenshots
 The following image demonstrates the application functionality:
 
-![weather-dashboard demo](./Assets/06-server-side-apis.png)
+![weather-dashboard demo](./Assets/Weather.png)
